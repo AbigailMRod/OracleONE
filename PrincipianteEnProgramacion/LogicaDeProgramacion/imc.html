@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculo del IMC</h1>
+    <script>
+        function saltarLinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        //función con parámetros
+        function imprimir(frase){
+            document.write("<big>" +frase + "</big>")
+            saltarLinea();
+        }
+        // función para calcular el IMC
+        function calculoIMC(peso, altura, nombre){
+            IMC = peso/(altura* altura)
+            imprimir("El IMC calculado es de: " + IMC + nombre)
+        }
+        calculoIMC(71, 1.55, " para Abigail");
+        calculoIMC(68, 1.68, " para Coco")
+
+        //función para calcular el promedio de IMC
+        function calculoIMCProm(peso, altura){
+            return (peso/ (altura*altura))
+        }
+        nombres = prompt("¿Cuál es su nombre?")
+        pesoInfromado = prompt("Informe su peso en kilogramos: ")
+        alturaInfromada= prompt("Informe su alturaem metros: ")
+        imcCalculado = calculoIMCProm(pesoInfromado,alturaInfromada)
+
+        
+        imprimir("El promedio de IMC calculado de Abigail y Coco es de: " + (calculoIMCProm(71,1.55)+calculoIMCProm(68,1.58))/2)
+        imprimir(nombres + " su IMC calculado es de: " + imcCalculado)
+
+        
+
+    </script>
+
+    
+</body>
+</html>

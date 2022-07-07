@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programa para calcular los puntos de un equipo de futbol</h1>
+    <script>
+        function saltarLinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase){
+            document.write(frase);
+            saltarLinea();
+        }
+        let victorias = parseInt(prompt("Informe la cantidad de victorias"));
+        let empates = parseInt( prompt("Informe la cantidad de empates"));
+
+        puntosTotales = (victorias*3)+empates
+
+        imprimir("El total de puntos del equipo es de: " +puntosTotales);
+        
+        if (puntosTotales>28){
+            imprimir("El equipo está mejor que el año pasado");
+        } else if (puntosTotales<28){
+            imprimir("El equipo está peor que el año pasado");
+        } else {
+            imprimir("El equipo está igual que el año pasado");
+        }
+
+        let peso = parseFloat(prompt("Ingresa tu peso en kilos"));
+        let altura = parseFloat(prompt("Ingresa tu altura en metros"));
+        imc= (peso/(altura*altura)).toFixed(2);
+        if(imc>40){
+            imprimir("Tu imc es de " + imc + " tienes obesidad grado III")
+        } else if(imc>35 && imc<39.9){
+            imprimir("Tu imc es de " + imc + " tienes obesidad grado II ")
+        } else if(imc>30 && imc<34.9){
+            imprimir("Tu imc es de " + imc + " tienes obesidad grado I" )
+        } else if(imc>25 && imc<29.9){
+            imprimir("Tu imc es de " + imc + " tienes sobrepeso")
+        } else{
+            imprimir("Tu imc es de " + imc + "tienes un imc normal")
+        }
+
+    </script>
+    
+</body>
+</html>

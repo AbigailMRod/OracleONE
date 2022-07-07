@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Estrellas </h1>
+    <script>
+        function saltarLinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase){
+            document.write(frase);
+            saltarLinea();
+        }
+
+        //for anidados 
+        for(let lineas =1; lineas <=3; lineas++){
+            for(let columnas =1; columnas<=10; columnas++){
+                document.write("*");
+            }
+            saltarLinea();
+        }
+        </script>
+
+        <script>
+
+            var inicioDeSesionRegistrado = "alura";
+            var contrasenhaRegistrada = "alura321";
+
+            var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+            var contrasenhaIngresada = prompt("Ingrese su contraseña");
+            let contador=1
+
+            for(let contador=1; contador<=3;contador++){
+                if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+                    alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+                    break;
+                } else {
+                    alert("inicio de sesión inválido. Favor intente de nuevo");
+                }
+            }
+        </script>
+    
+</body>
+</html>
